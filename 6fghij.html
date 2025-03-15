@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Exercise 6fghij</title>
+    </head>
+
+    <body>
+        <button onclick="
+            guess = 'heads'
+            ">
+            Heads
+        </button>
+
+        <button onclick="
+            guess = 'tails'
+            ">
+            Tails
+        </button>
+
+        <script>
+            let coin = Math.random();
+            let result;
+            let guess;
+            if(coin<0.5)
+            {
+                result='heads';
+                console.log(result);
+            }   
+
+            else
+            {
+                result='tails';
+                console.log(result);
+            }
+
+            if(guess === result)
+            {
+                console.log('you win!');
+            }
+
+            else
+            {
+                console.log('you win!');
+            }
+        </script>
+    </body>
+</html>
