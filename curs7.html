@@ -7,126 +7,107 @@
     <p> Rock paper scissors </p>
 
     <button onclick="
-      randomNumber = Math.random();
-      if (randomNumber >=0 && randomNumber <1/3)
-      {
-        computerMove ='rock';
-      }
-
-      else if (randomNumber >=1/3 && randomNumber <2/3)
-      {
-        computerMove = 'paper';
-      }
-
-      else if (randomNumber >=2/3 && randomNumber <1)
-      {
-        computerMove = 'scissors';
-      }
-
-      console.log(computerMove);
-
-      if (computerMove === 'rock')
-      {
-        result = 'tie';
-      }
-
-      else if (computerMove === 'paper')
-      {
-        result = 'lose';
-      }
-
-      else if (computerMove === 'scissors')
-      {
-        result = 'win';
-      }
-
-      alert(`you picked rock, computer picked ${computerMove}, you ${result}.`);
+    playGame('rock')
     ">
       Rock
     </button>
 
     <button onclick="
-      randomNumber = Math.random();
-      if (randomNumber >=0 && randomNumber <1/3)
-      {
-        computerMove ='rock';
-      }
-
-      else if (randomNumber >=1/3 && randomNumber <2/3)
-      {
-        computerMove = 'paper';
-      }
-
-      else if (randomNumber >=2/3 && randomNumber <1)
-      {
-        computerMove = 'scissors';
-      }
-
-      console.log(computerMove);
-
-      if (computerMove === 'rock')
-       {
-         result = 'win';
-       }
-
-      else if (computerMove === 'paper')
-       {
-         result = 'tie';
-       }
-
-      else if (computerMove === 'scissors')
-      {
-        result = 'lose';
-      }
-
-      alert(`you picked paper, computer picked ${computerMove}, you ${result}.`);
+    playGame('paper')
     ">
       Paper
     </button>
 
     <button onclick="
-      randomNumber = Math.random();
-      if (randomNumber >=0 && randomNumber <1/3)
-      {
-        computerMove ='rock';
-      }
-
-      else if (randomNumber >=1/3 && randomNumber <2/3)
-      {
-        computerMove = 'paper';
-      }
-
-      else if (randomNumber >=2/3 && randomNumber <1)
-      {
-        computerMove = 'scissors';
-      }
-
-      console.log(computerMove);
-
-      if (computerMove === 'rock')
-      {
-        result = 'lose';
-      }
-
-      else if (computerMove === 'paper')
-      {
-        result = 'win';
-      }
-
-      else if (computerMove === 'scissors')
-      {
-        result = 'tie';
-      }
-
-      alert(`you picked scissors, computer picked ${computerMove}, you ${result}.`);
+    playGame('scissors')
     ">
       Scissors
     </button>
 
     <script>
-      let randomNumber = Math.random();
-      let computerMove = '';
-      let result = '';
+        function playGame(playerMove)
+        {
+        pickComputerMove()
+        console.log(computerMove);
+        if(playerMove === 'scissors')
+            {
+            if (computerMove === 'rock')
+            {
+                result = 'lose';
+            }
+
+            else if (computerMove === 'paper')
+            {
+                result = 'win';
+            }
+
+            else if (computerMove === 'scissors')
+            {
+                result = 'tie';
+            }
+            } else if(playerMove === 'paper')
+            {
+                console.log(computerMove);
+
+            if (computerMove === 'rock')
+            {
+                result = 'win';
+            }
+
+            else if (computerMove === 'paper')
+            {
+                result = 'tie';
+            }
+
+            else if (computerMove === 'scissors')
+            {
+                result = 'lose';
+            }
+            } else if (playerMove === 'rock')
+            {
+                console.log(computerMove);
+
+            if (computerMove === 'rock')
+            {
+                result = 'tie';
+            }
+
+            else if (computerMove === 'paper')
+            {
+                result = 'lose';
+            }
+
+            else if (computerMove === 'scissors')
+            {
+                result = 'win';
+            }
+            }
+            alert(`you picked ${playerMove}, computer picked ${computerMove}, you ${result}.`);
+        }
+
+        function pickComputerMove()
+        {
+            randomNumber = Math.random();
+            if (randomNumber >=0 && randomNumber <1/3)
+            {
+                computerMove ='rock';
+            }
+
+            else if (randomNumber >=1/3 && randomNumber <2/3)
+            {
+                computerMove = 'paper';
+            }
+
+            else if (randomNumber >=2/3 && randomNumber <1)
+            {
+                computerMove = 'scissors';
+            }
+
+            return 5;
+        }
+        let randomNumber = Math.random();
+        let computerMove = '';
+        let result = '';
     </script>
   </body>
 </html>
