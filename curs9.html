@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="EN">
+<head>
+    <title>DOM</title>
+</head>
+
+<body>
+<button>
+    hello
+</button>
+<button class = "js-button">Second Button</button>
+<script>
+    console.log(document.querySelector('button').innerHTML);
+    document.querySelector('button').innerHTML = 'changed';
+    let buttonElement = document.querySelector('.js-button');
+
+    /*
+    document.body.innerHTML = 'hello';
+    document.title = 'hello'; */
+</script>
+</body>
+</html>
