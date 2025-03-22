@@ -13,8 +13,35 @@
 
     <p>Rock Paper Scissors Game</p>
 
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="cost of order" class="js-order-cost-input" onkeydown="
+    costKeydown(event)
+    "
+           }>
+    <button onclick="
+        calculateTotal();
+    ">Calculate</button>
+    <p class = "js-total-cost"></p>
+
 
 <script>
+    function costKeydown(event) {
+        if (event.key === 'Enter') {
+            calculateTotal();
+        }
+    }
+
+    function calculateTotal(){
+        const inputElement = document.querySelector('.js-order-cost-input');
+        let cost = Number(inputElement.value);
+
+        if (cost < 40) {
+            cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost').innerHTML = `Total Cost: ${cost}`;
+    }
+
     function subscribe() {
         const buttonElement = document.querySelector('.js-subscribe-button');
 
@@ -24,6 +51,7 @@
             buttonElement.innerHTML = 'Subscribe';
         }
     }
+
 </script>
 </body>
 </html>
