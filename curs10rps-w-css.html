@@ -9,25 +9,51 @@
                 color: white;
                 font-family: Arial;
             }
+
+            .title{
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .move-icon{
+                background-color: transparent;
+                border: 3px solid white;
+                width: 120px;
+                height: 120px;
+                border-radius: 60px;
+                margin-right: 10px;
+            }
+
+            .move-icon img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .result{
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 50px;
+            }
         </style>
+
     </head>
     <body>
-    <p> Rock paper scissors </p>
+    <p class = "title"> Rock paper scissors </p>
 
     <button onclick="
         playGame('rock')
-    ">Rock
+    " class = "move-icon"><img src="rock-emoji.png">
     </button>
 
     <button onclick="
         playGame('paper')
-        ">Paper
+        " class = "move-icon"><img src="paper-emoji.png">
     </button>
 
     <button onclick="
                 playGame('scissors')
-                ">
-        Scissors
+                " class = "move-icon">
+        <img src="scissors-emoji.png">
     </button>
 
     <button onclick="
@@ -39,7 +65,7 @@
         Reset score
     </button>
 
-    <p class = "js-result"></p>
+    <p class = "js-result result"></p>
     <p class = "js-moves"></p>
     <p class = "js-score"></p>
 
