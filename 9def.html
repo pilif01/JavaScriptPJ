@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+    <input placeholder="Name" class="js-name-input" onkeydown="
+    costKeydown(event)">
 
+    <button onclick="
+          onClick()
+        ">Submit</button>
+
+    <p class="js-message"></p>
+
+    <script>
+        function costKeydown(event) {
+            if (event.key === 'Enter') {
+                onClick();
+            }
+        }
+
+        function onClick() {
+            const inputElement = document.querySelector('.js-name-input');
+            document.querySelector('.js-message').innerHTML = `Your name is: ${inputElement.value}`;
+        }
+    </script>
+    </body>
+</html>
