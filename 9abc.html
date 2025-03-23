@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Exercise 9abc</title>
+    </head>
+
+    <body>
+    <button class = "js-button">
+        button
+    </button>
+
+    <button onclick="
+    onClick()
+    " class = "js-button2">button2
+    </button>
+
+    <p></p>
+
+    <button onclick="
+    document.querySelector('.js-result').innerHTML = 'You chose heads!'">
+        heads
+    </button>
+
+    <button onclick="
+    document.querySelector('.js-result').innerHTML = 'You chose tails!'">
+        tails
+    </button>
+
+    <p class = "js-result"></p>
+
+    <script>
+        console.log(document.querySelector('button'));
+
+        function onClick() {
+
+
+            const click = document.querySelector('.js-button2');
+
+            if(click.innerText === 'button2') {
+                click.innerHTML = 'button2, well done';
+            } else {
+                click.innerHTML = 'button2';
+            }
+        }
+    </script>
+
+
+    </body>
+</html>
